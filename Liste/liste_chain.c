@@ -1,5 +1,8 @@
 #include"liste_chain.h"
-Liste *intilise()
+
+/*This Algorithm define Function to manipulate List in C*/
+
+Liste *intilise()                                             // Initilaze List
 {
     Liste *liste= malloc(sizeof(Liste)); 
     Element *element1 =malloc(sizeof(Element)); 
@@ -13,8 +16,12 @@ Liste *intilise()
 
 
 
-void AddElementAtLastListe(Liste *liste , int number) 
+void AddElementAtLastListe(Liste *liste , int number)        // Adding Element at the end of a list 
 {
+    /*
+       liste : at which List should the number added
+       Number: which number should be added
+    */  
     Element *element = liste->first;
     Element *addtetElemnt=malloc(sizeof(Element)); 
     if (liste==NULL || addtetElemnt==NULL ){exit(EXIT_FAILURE);}
@@ -32,7 +39,7 @@ void AddElementAtLastListe(Liste *liste , int number)
 }
 
 
-void showListe(Liste *liste)
+void showListe(Liste *liste)                                  // Print the List data
 {
     if (liste == NULL) { printf("\ncondo\n");exit(EXIT_FAILURE);}
     Element *element = liste->first; 
@@ -43,8 +50,17 @@ void showListe(Liste *liste)
     }while(element!=NULL);
 }
 
-void AddElemntAtMidList(Liste *liste , int number , int adresse ,  int adresse_apres)
+void AddElemntAtMidList(Liste *liste , int number , int adresse ,  int adresse_apres)  // Added Element in the middle of the List   
 {
+
+/*
+
+    liste:   List in there should the Element be Added. 
+    number:  number should be added
+    address: address in there the element should be added
+    address_apres: the first address after the added element
+
+ */    
 
 Element *newElemnt = malloc(sizeof(Element)); 
 newElemnt->element=number; 
@@ -65,7 +81,7 @@ elemnt1->next=newElemnt;
 
 
 
-int sizeList(Liste *liste)
+int sizeList(Liste *liste)     //size of the list
 {
     int size = 0;
     Element *elemt = liste->first; 

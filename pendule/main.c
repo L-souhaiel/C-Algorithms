@@ -7,6 +7,8 @@
 #define length_mouves_max 10
 
 
+//pendule , is a game in which the user try to find the choosen world from the Computer
+
 int main () 
 
 {

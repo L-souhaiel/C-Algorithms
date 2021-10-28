@@ -1,9 +1,9 @@
 #include"dequeue.h" 
 #include<errno.h>
 
+/*This Program is to define The Dequeue (LIFO) delete and Add element*/
 
-
-Dequeue *intiliseDequeue()
+Dequeue *intiliseDequeue()  //Intialize the Dequeue
 {
     Dequeue *liste= malloc(sizeof(Dequeue)); 
     Element *element1 =malloc(sizeof(Element)); 
@@ -14,7 +14,7 @@ Dequeue *intiliseDequeue()
 
 
 
-void showQueue(Dequeue *dequeue)  
+void showQueue(Dequeue *dequeue)  //Print All the Dequeue Variable
 {
     if (dequeue== NULL) { printf("\ncondo\n");exit(EXIT_FAILURE);}
     Element *element =dequeue->first;  
@@ -28,7 +28,7 @@ void showQueue(Dequeue *dequeue)
 
 
 
-void stacking(Dequeue *dequeue , int nb) //empilage
+void stacking(Dequeue *dequeue , int nb) // Add Element in the Begining to the Dequeue
 {
 
 Element *element1=malloc(sizeof(Element)); 
@@ -42,7 +42,7 @@ dequeue->first = element1;
 
 
 
-int unstacking(Dequeue *dequeue) //depilage
+int unstacking(Dequeue *dequeue) //Remove the First Element
 {
 int nbreturned=0;
 

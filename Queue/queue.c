@@ -1,6 +1,8 @@
 #include"queue.h" 
 
-void showQueue(Queue *queue)  
+//this program give the user the posiblity to manipulate Queue in C
+
+void showQueue(Queue *queue)                             //print all queue data 
 {
     if (queue== NULL) { printf("\ncondo\n");exit(EXIT_FAILURE);}
     Element *element =queue->first;  
@@ -13,7 +15,7 @@ void showQueue(Queue *queue)
 
 
 
-Queue *intiliserQueue()
+Queue *intiliserQueue()                                    //initilaize the Queue
 {
     Queue *queue = malloc(sizeof(Queue)); 
     if (queue==NULL){perror("malloc");exit(EXIT_FAILURE);}
@@ -23,7 +25,7 @@ Queue *intiliserQueue()
 
 
 
-void addElementQueue(Queue *queue , int nb1 )
+void addElementQueue(Queue *queue , int nb1 )            //added Element in the End of the Queue
 {
 Element *element1=malloc(sizeof(Element)); 
 if(queue==NULL || element1==NULL){perror("malloc"); exit(EXIT_FAILURE);}
@@ -51,7 +53,7 @@ queue->first=element1;
 
 
 
-int unstackingQueue(Queue *queue)
+int unstackingQueue(Queue *queue)                           //Remove the Firt element from  the Queue and return it .
 {
 
     int nbreturned = 0;

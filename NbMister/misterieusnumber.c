@@ -6,6 +6,8 @@
 #define TRUE 1 
 #define FALSE 0 
 
+//this a small game , in which the user try to find the random choosen number from the computer
+
 int main (int argc , char *argv[])
 
 {
